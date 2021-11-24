@@ -415,6 +415,7 @@ export default class DropdownAlert extends Component {
     const end = this.getEndDelta(height, endDelta);
     return [start, end];
   };
+
   getStyleForType(type) {
     const { defaultContainer } = this.props;
     return [
