@@ -1,5 +1,5 @@
 {
-  "name": "react-native-dropdown-alert",
+  "name": "@djintalkalan/react-native-dropdown-alert",
   "version": "0.0.1",
   "description": "A simple alert to notify users about new chat messages, something went wrong or everything is ok.",
   "main": "DropdownAlert.js",
