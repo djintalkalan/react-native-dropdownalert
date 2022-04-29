@@ -283,7 +283,7 @@ export default class DropdownAlert extends Component {
     if (interval && typeof interval === 'number') {
       data.interval = interval;
     }
-    if (ignoreSame && (this?.queue?.data || []).findIndex(_ => isEqual(_, data)))
+    if (ignoreSame && (this?.queue?.data || []).findIndex(_ => isEqual(_, data)) > -1)
       return
     this.queue.enqueue(data);
     // start processing queue when it has at least one
