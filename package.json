@@ -1,6 +1,6 @@
 {
   "name": "dj-react-native-dropdown-alert",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A simple alert to notify users about new chat messages, something went wrong or everything is ok.",
   "main": "DropdownAlert.js",
   "types": "index.d.ts",
@@ -32,8 +32,8 @@
     "react-native": "0.61.5"
   },
   "dependencies": {
-    "prop-types": "15.5.10",
-    "lodash": "^4.17.19"
+    "lodash": "^4.17.19",
+    "prop-types": "15.5.10"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.170"
