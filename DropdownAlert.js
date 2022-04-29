@@ -1,3 +1,4 @@
+import { isEqual } from 'lodash';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
@@ -265,6 +266,7 @@ export default class DropdownAlert extends Component {
     message = '',
     payload = {},
     interval,
+    ignoreSame = false
   ) => {
     // type is not validated so unexpected types will render alert with default styles.
     // these default styles can be overridden with style props. (for example, containerStyle)
@@ -281,6 +283,8 @@ export default class DropdownAlert extends Component {
     if (interval && typeof interval === 'number') {
       data.interval = interval;
     }
+    if (ignoreSame && (this?.queue?.data || []).findIndex(_ => isEqual(_, data)))
+      return
     this.queue.enqueue(data);
     // start processing queue when it has at least one
     if (this.getQueueSize() === 1) {
