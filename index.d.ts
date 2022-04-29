@@ -77,6 +77,7 @@ export default class DropdownAlert extends React.Component<
     message: string,
     payload?: object,
     interval?: number,
+    ignoreSame?: boolean,
   ): void
   closeAction(
     action?: CloseActionType,

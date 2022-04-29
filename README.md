@@ -51,6 +51,7 @@ export default class App extends Component {
       // alertWithType parameters: type, title, message, payload, interval.
       // payload object that includes a source property overrides the image source prop. (optional: object)
       // interval takes precedence over the closeInterval prop. (optional: number)
+      // ignoreSame ignore multiple same type of error
       this.dropDownAlertRef.alertWithType('info', 'Info', 'Start fetch data.');
       await fetch('https://httpbin.org/get');
       this.dropDownAlertRef.alertWithType('success', 'Success', 'Finish fetch data');
