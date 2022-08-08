@@ -422,10 +422,11 @@ export default class DropdownAlert extends Component {
 
   getStyleForType(type) {
     const { defaultContainer } = this.props;
-    return [
-      StyleSheet.flatten(defaultContainer),
-      { backgroundColor: 'transparent' },
-    ];
+    if (this.props?.customAlert)
+      return [
+        StyleSheet.flatten(defaultContainer),
+        { backgroundColor: 'transparent' },
+      ];
     switch (type) {
       case TYPE.info:
         return [
