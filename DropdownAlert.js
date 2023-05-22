@@ -2,17 +2,18 @@ import { isEqual } from 'lodash';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
-  Animated, PanResponder, SafeAreaView, StatusBar, StyleSheet, TouchableOpacity, View
+  Animated, Image, PanResponder, SafeAreaView, StatusBar, StyleSheet, TouchableOpacity, View
 } from 'react-native';
 import CancelButton from './CancelButton';
-import {
-  ACTION, DEFAULT_IMAGE_DIMENSIONS, getDefaultStatusBarBackgroundColor, getDefaultStatusBarStyle, HEIGHT, IS_ANDROID,
-  IS_IOS_BELOW_11,
-  TYPE
-} from './constants';
-import ImageView from './imageview';
 import Queue from './Queue';
 import TextView from './TextView';
+import {
+  ACTION, DEFAULT_IMAGE_DIMENSIONS,
+  HEIGHT, IS_ANDROID,
+  IS_IOS_BELOW_11,
+  TYPE,
+  getDefaultStatusBarBackgroundColor, getDefaultStatusBarStyle
+} from './constants';
 
 export default class DropdownAlert extends Component {
   static propTypes = {
@@ -499,7 +500,7 @@ export default class DropdownAlert extends Component {
       return this.props.renderImage(this.props, this.alertData);
     }
     return (
-      <ImageView
+      <Image
         style={StyleSheet.flatten(this.props.imageStyle)}
         source={source}
       />
